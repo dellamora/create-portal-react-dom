@@ -12,7 +12,7 @@ type Props = {
 
 const Modal = ({ isOpen, onClose }: Props): JSX.Element => {
   const [mount, setMount] = useState(false);
-  
+
   useEffect(() => {
     setMount(true);
   }, []);
@@ -22,46 +22,46 @@ const Modal = ({ isOpen, onClose }: Props): JSX.Element => {
   }
   return createPortal(
     <>
-      {isOpen &&  (
+      {isOpen && (
         <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="flex fixed justify-center items-center z-50  h-screen  w-screen pointer-events-none"
+            className="pointer-events-none fixed z-50 flex h-screen  w-screen  items-center justify-center"
           >
-            <div className="relative flex flex-col pointer-events-auto bg-white rounded-lg w-full lg:max-w-xl lg:max-h-[90vh]  h-auto max-h-screen  md:w-3/5 overflow-y-hidden bg-primaryLight dark:bg-secondaryDark ">
-              <div className="relative aspect-video shrink-0">
-                {/* <Image
-                  className="object-cover aspect-video object-left"
-                  alt="project image"
-                  fill
-                  src={project.img}
-                /> */}
-                <CloseIcon
-                  className="block md:hidden absolute top-0 right-0 "
-                  onClick={() => {
-                    onClose();
-                  }}
-                />
-              </div>
-              <div className="flex flex-col  p-4 overflow-y-auto grow pb-24">
-                <h1 className="font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode text-bold mb-5">
-                 OOOOOOOOOOOOOOO
+            <div className="pointer-events-auto relative flex h-auto max-h-screen w-full flex-col overflow-y-hidden  rounded-lg bg-[#1E1E1E]   md:w-3/5 lg:max-h-[90vh] lg:max-w-7xl ">
+              <CloseIcon
+                className="absolute top-0 right-0 block md:hidden"
+                onClick={() => {
+                  onClose();
+                }}
+              />
+              <div className="flex grow flex-col overflow-y-auto p-4 pb-24 text-white">
+                <h1 className=" text-bold mb-5 text-3xl font-bold">
+                  Hoje vamos falar sobre um recurso bem legal do React: o
+                  createPortal.
                 </h1>
-                    <span
-                      className="font-Inter font-medium text-justify dark:text-grayLight"
-                    >
-                      OOO
-                      </span>
-                <div className="flex flex-row  flex-wrap mt-5">
-                  <h3 className="pr-2 text-base">Stack:</h3>
-                  
-                        <h3 className="font-thin text-base">
-                                 SSSSSSSSS
-                        </h3>
-                </div>
+                <span className=" text-justify text-lg ">
+                  Você já teve aquele componente que precisava ser renderizado
+                  em um lugar específico fora da árvore de componentes, mas não
+                  queria bagunçar toda a estrutura da sua aplicação? <br /> Pois
+                  é, o createPortal é a solução para esses casos! Com ele, você
+                  pode renderizar componentes em um local diferente do
+                  componente pai, mantendo a sua árvore de componentes
+                  organizada. <br /> Usar o createPortal é bem simples.
+                  Primeiro, você cria um elemento de destino no HTML, e depois
+                  passa esse elemento como o primeiro argumento da chamada da
+                  função createPortal. <br /> O segundo argumento é o componente
+                  que você deseja renderizar dentro desse elemento de destino. E
+                  pronto, o React cuidará do resto! <br /> O createPortal é
+                  perfeito para componentes como modais, tooltips ou context
+                  menus, que precisam ser renderizados em um local específico
+                  fora da árvore de componentes. <br /> Se você deseja ter uma
+                  aplicação React organizada e clara, e precisa renderizar
+                  componentes em lugares específicos fora da árvore de
+                  componentes, o createPortal é a solução perfeita para você!
+                </span>
               </div>
-
             </div>
           </motion.div>
           <Backdrop
