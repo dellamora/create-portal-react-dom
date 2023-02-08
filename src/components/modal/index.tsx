@@ -72,7 +72,7 @@ const Modal = ({ isOpen, onClose }: Props): JSX.Element => {
         </>
       )}
     </>,
-    document.getElementById("modal-root"),
+    document.getElementById("modal-root")!,
   );
 };
 
