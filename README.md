@@ -1,6 +1,6 @@
 #  ExemploModalPortalReac 
 
- Exemplo da thread sobre Portal React do React-DOM, você pode ler a thread explicando o que é e como usar Portais no react [aqui](https://twitter.com/francidellamora/status/1623671005989203968).
+ Você pode conferir o exemplo [clicando aqui](https://createportal-react.vercel.app/) e ler a thread sobre Portal React do React-DOM [aqui](https://twitter.com/francidellamora/status/1623671005989203968).
 
 
 ## Tecnlogias usadas
